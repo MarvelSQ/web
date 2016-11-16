@@ -1,0 +1,1339 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>食譜-預覽</title>
+    <style>
+        div {
+            line-height: 22px;
+        }
+        .week {
+            width: 2625px;
+            float: left;
+            border: 1px solid #2196f3;
+            border-radius: 4px;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        .recipe{
+            width: 375px;
+            background-color: #2aabd2;
+        }
+
+        .header {
+            background-color: #00b050;
+            text-align: center;
+        }
+
+        .th1, .th2 {
+            background-color: #d9d9d9;
+        }
+
+        .header, .th1, .th2, .cell1, .cell2, .cell3 {
+            box-sizing: border-box;
+            border: 1px solid #ffffff;
+        }
+
+        .recipe, .breakfast, .lunch, .dinner, .dessert, .th1, .th2, .cell1, .cell2, .cell3, .mater, .weight, .maters, .weights, .ergs, .nums {
+            float: left;
+        }
+
+        .breakfast, .lunch, .dinner, .dessert {
+            width: 100%;
+        }
+
+        .breakfast {
+            background-color: #ccecff
+        }
+
+        .lunch {
+            background-color: #edf1de
+        }
+
+        .dinner {
+            background-color: #ffffcc
+        }
+
+        .dessert {
+            background-color: #fde9d9
+        }
+
+        .th1, .cell1 {
+            width: 25%;
+        }
+
+        .th2 {
+            width: 75%;
+        }
+
+        .cell2 {
+            width: 40%;
+        }
+
+        .cell3 {
+            width: 35%;
+        }
+
+        .mater {
+            width: 30%;
+        }
+
+        .weight {
+        }
+
+        .maters {
+            width: 56.25%;
+        }
+
+        .weights {
+            width: 43.75%;
+        }
+
+        .ergs {
+            width: 50%;
+        }
+
+        .nums {
+            width: 50%;
+            text-align: center;
+        }
+
+        .cell1, .cell2, .cell3 {
+            min-height: 88px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            height: 100%;
+            overflow: scroll;
+            background: rgba(0, 0, 0, 0.7);;
+        }
+
+        .modal-body {
+            width: 375px;
+            background-color: #2aabd2;
+            margin-top: 74px;
+            margin-right: auto;
+            margin-left: auto;
+            margin-bottom: 0;
+        }
+        .modal-foot{
+            margin: 15px;
+            position: fixed;
+            right: 0;
+            left: 0;
+            top: 0;
+            text-align: center;
+        }
+        .btn {
+            font-size: 16px;
+            color: #FFF;
+            background-color: #4BBE2C;
+            border: 0;
+            border-radius: 4px;
+            padding: 8px;
+        }
+
+        .btn[disabled] {
+            background-color: #ccc;
+        }
+    </style>
+    <script>
+        var MODAL
+        var MODAL_BODY
+        window.onload = function () {
+            MODAL=document.getElementsByClassName('modal')[0]
+            MODAL_BODY=document.getElementsByClassName('modal-body')[0]
+            var recipes = document.querySelectorAll('.recipe');
+            for (var i = 0; i < recipes.length; i++) {
+                recipes[i].addEventListener('click', function () {
+                    MODAL_BODY.innerHTML=this.innerHTML
+                    showModal()
+                    console.log(this);
+                });
+            }
+
+        }
+        function showModal() {
+            MODAL.style.display = "block";
+        }
+        function hideModal() {
+            MODAL.style.display = "none";
+            MODAL_BODY.innerHTML=""
+        }
+    </script>
+</head>
+<body>
+<div class="week">
+    <div class="recipe">
+        <div class="header">周一</div>
+        <div class="th1">早餐</div>
+        <div class="th2">
+            <div class="mater">食材</div>
+            <div class="weight">份量</div>
+        </div>
+        <div class="breakfast">
+            <div class="cell1" style="height:0px"></div>
+            <div class="cell2" style="height:0px"></div>
+            <div class="cell3" style="height:0px">
+                <div>
+                    <div class="ergs">能量</div>
+                    <div class="nums">0大卡</div>
+                </div>
+                <div>
+                    <div class="ergs">蛋白質</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">糖類</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">脂肪</div>
+                    <div class="nums">0%</div>
+                </div>
+            </div>
+        </div>
+        <div class="th1">早點</div>
+        <div class="th2">
+            <div class="mater">食材</div>
+            <div class="weight">份量</div>
+        </div>
+        <div class="dessert">
+            <div class="cell1" style="height:0px"></div>
+            <div class="cell2" style="height:0px"></div>
+            <div class="cell3" style="height:0px">
+                <div>
+                    <div class="ergs">能量</div>
+                    <div class="nums">0大卡</div>
+                </div>
+                <div>
+                    <div class="ergs">蛋白質</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">糖類</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">脂肪</div>
+                    <div class="nums">0%</div>
+                </div>
+            </div>
+        </div>
+        <div class="th1">午餐</div>
+        <div class="th2">
+            <div class="mater">食材</div>
+            <div class="weight">份量</div>
+        </div>
+        <div class="lunch">
+            <div class="cell1" style="height:0px"></div>
+            <div class="cell2" style="height:0px"></div>
+            <div class="cell3" style="height:0px">
+                <div>
+                    <div class="ergs">能量</div>
+                    <div class="nums">0大卡</div>
+                </div>
+                <div>
+                    <div class="ergs">蛋白質</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">糖類</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">脂肪</div>
+                    <div class="nums">0%</div>
+                </div>
+            </div>
+        </div>
+        <div class="th1">午點</div>
+        <div class="th2">
+            <div class="mater">食材</div>
+            <div class="weight">份量</div>
+        </div>
+        <div class="dessert">
+            <div class="cell1" style="height:0px"></div>
+            <div class="cell2" style="height:0px"></div>
+            <div class="cell3" style="height:0px">
+                <div>
+                    <div class="ergs">能量</div>
+                    <div class="nums">0大卡</div>
+                </div>
+                <div>
+                    <div class="ergs">蛋白質</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">糖類</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">脂肪</div>
+                    <div class="nums">0%</div>
+                </div>
+            </div>
+        </div>
+        <div class="th1">晚餐</div>
+        <div class="th2">
+            <div class="mater">食材</div>
+            <div class="weight">份量</div>
+        </div>
+        <div class="dinner">
+            <div class="cell1" style="height:0px"></div>
+            <div class="cell2" style="height:0px"></div>
+            <div class="cell3" style="height:0px">
+                <div>
+                    <div class="ergs">能量</div>
+                    <div class="nums">0大卡</div>
+                </div>
+                <div>
+                    <div class="ergs">蛋白質</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">糖類</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">脂肪</div>
+                    <div class="nums">0%</div>
+                </div>
+            </div>
+        </div>
+        <div class="th1">晚點</div>
+        <div class="th2">
+            <div class="mater">食材</div>
+            <div class="weight">份量</div>
+        </div>
+        <div class="dessert">
+            <div class="cell1" style="height:0px"></div>
+            <div class="cell2" style="height:0px"></div>
+            <div class="cell3" style="height:0px">
+                <div>
+                    <div class="ergs">能量</div>
+                    <div class="nums">0大卡</div>
+                </div>
+                <div>
+                    <div class="ergs">蛋白質</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">糖類</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">脂肪</div>
+                    <div class="nums">0%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="recipe">
+        <div class="header">周二</div>
+        <div class="th1">早餐</div>
+        <div class="th2">
+            <div class="mater">食材</div>
+            <div class="weight">份量</div>
+        </div>
+        <div class="breakfast">
+            <div class="cell1" style="height:0px"></div>
+            <div class="cell2" style="height:0px"></div>
+            <div class="cell3" style="height:0px">
+                <div>
+                    <div class="ergs">能量</div>
+                    <div class="nums">0大卡</div>
+                </div>
+                <div>
+                    <div class="ergs">蛋白質</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">糖類</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">脂肪</div>
+                    <div class="nums">0%</div>
+                </div>
+            </div>
+        </div>
+        <div class="th1">早點</div>
+        <div class="th2">
+            <div class="mater">食材</div>
+            <div class="weight">份量</div>
+        </div>
+        <div class="dessert">
+            <div class="cell1" style="height:0px"></div>
+            <div class="cell2" style="height:0px"></div>
+            <div class="cell3" style="height:0px">
+                <div>
+                    <div class="ergs">能量</div>
+                    <div class="nums">0大卡</div>
+                </div>
+                <div>
+                    <div class="ergs">蛋白質</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">糖類</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">脂肪</div>
+                    <div class="nums">0%</div>
+                </div>
+            </div>
+        </div>
+        <div class="th1">午餐</div>
+        <div class="th2">
+            <div class="mater">食材</div>
+            <div class="weight">份量</div>
+        </div>
+        <div class="lunch">
+            <div class="cell1" style="height:0px"></div>
+            <div class="cell2" style="height:0px"></div>
+            <div class="cell3" style="height:0px">
+                <div>
+                    <div class="ergs">能量</div>
+                    <div class="nums">0大卡</div>
+                </div>
+                <div>
+                    <div class="ergs">蛋白質</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">糖類</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">脂肪</div>
+                    <div class="nums">0%</div>
+                </div>
+            </div>
+        </div>
+        <div class="th1">午點</div>
+        <div class="th2">
+            <div class="mater">食材</div>
+            <div class="weight">份量</div>
+        </div>
+        <div class="dessert">
+            <div class="cell1" style="height:0px"></div>
+            <div class="cell2" style="height:0px"></div>
+            <div class="cell3" style="height:0px">
+                <div>
+                    <div class="ergs">能量</div>
+                    <div class="nums">0大卡</div>
+                </div>
+                <div>
+                    <div class="ergs">蛋白質</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">糖類</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">脂肪</div>
+                    <div class="nums">0%</div>
+                </div>
+            </div>
+        </div>
+        <div class="th1">晚餐</div>
+        <div class="th2">
+            <div class="mater">食材</div>
+            <div class="weight">份量</div>
+        </div>
+        <div class="dinner">
+            <div class="cell1" style="height:0px"></div>
+            <div class="cell2" style="height:0px"></div>
+            <div class="cell3" style="height:0px">
+                <div>
+                    <div class="ergs">能量</div>
+                    <div class="nums">0大卡</div>
+                </div>
+                <div>
+                    <div class="ergs">蛋白質</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">糖類</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">脂肪</div>
+                    <div class="nums">0%</div>
+                </div>
+            </div>
+        </div>
+        <div class="th1">晚點</div>
+        <div class="th2">
+            <div class="mater">食材</div>
+            <div class="weight">份量</div>
+        </div>
+        <div class="dessert">
+            <div class="cell1" style="height:0px"></div>
+            <div class="cell2" style="height:0px"></div>
+            <div class="cell3" style="height:0px">
+                <div>
+                    <div class="ergs">能量</div>
+                    <div class="nums">0大卡</div>
+                </div>
+                <div>
+                    <div class="ergs">蛋白質</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">糖類</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">脂肪</div>
+                    <div class="nums">0%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="recipe">
+        <div class="header">周三</div>
+        <div class="th1">早餐</div>
+        <div class="th2">
+            <div class="mater">食材</div>
+            <div class="weight">份量</div>
+        </div>
+        <div class="breakfast">
+            <div class="cell1" style="height:0px"></div>
+            <div class="cell2" style="height:0px"></div>
+            <div class="cell3" style="height:0px">
+                <div>
+                    <div class="ergs">能量</div>
+                    <div class="nums">0大卡</div>
+                </div>
+                <div>
+                    <div class="ergs">蛋白質</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">糖類</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">脂肪</div>
+                    <div class="nums">0%</div>
+                </div>
+            </div>
+        </div>
+        <div class="th1">早點</div>
+        <div class="th2">
+            <div class="mater">食材</div>
+            <div class="weight">份量</div>
+        </div>
+        <div class="dessert">
+            <div class="cell1" style="height:0px"></div>
+            <div class="cell2" style="height:0px"></div>
+            <div class="cell3" style="height:0px">
+                <div>
+                    <div class="ergs">能量</div>
+                    <div class="nums">0大卡</div>
+                </div>
+                <div>
+                    <div class="ergs">蛋白質</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">糖類</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">脂肪</div>
+                    <div class="nums">0%</div>
+                </div>
+            </div>
+        </div>
+        <div class="th1">午餐</div>
+        <div class="th2">
+            <div class="mater">食材</div>
+            <div class="weight">份量</div>
+        </div>
+        <div class="lunch">
+            <div class="cell1" style="height:0px"></div>
+            <div class="cell2" style="height:0px"></div>
+            <div class="cell3" style="height:0px">
+                <div>
+                    <div class="ergs">能量</div>
+                    <div class="nums">0大卡</div>
+                </div>
+                <div>
+                    <div class="ergs">蛋白質</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">糖類</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">脂肪</div>
+                    <div class="nums">0%</div>
+                </div>
+            </div>
+        </div>
+        <div class="th1">午點</div>
+        <div class="th2">
+            <div class="mater">食材</div>
+            <div class="weight">份量</div>
+        </div>
+        <div class="dessert">
+            <div class="cell1" style="height:0px"></div>
+            <div class="cell2" style="height:0px"></div>
+            <div class="cell3" style="height:0px">
+                <div>
+                    <div class="ergs">能量</div>
+                    <div class="nums">0大卡</div>
+                </div>
+                <div>
+                    <div class="ergs">蛋白質</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">糖類</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">脂肪</div>
+                    <div class="nums">0%</div>
+                </div>
+            </div>
+        </div>
+        <div class="th1">晚餐</div>
+        <div class="th2">
+            <div class="mater">食材</div>
+            <div class="weight">份量</div>
+        </div>
+        <div class="dinner">
+            <div class="cell1" style="height:0px"></div>
+            <div class="cell2" style="height:0px"></div>
+            <div class="cell3" style="height:0px">
+                <div>
+                    <div class="ergs">能量</div>
+                    <div class="nums">0大卡</div>
+                </div>
+                <div>
+                    <div class="ergs">蛋白質</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">糖類</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">脂肪</div>
+                    <div class="nums">0%</div>
+                </div>
+            </div>
+        </div>
+        <div class="th1">晚點</div>
+        <div class="th2">
+            <div class="mater">食材</div>
+            <div class="weight">份量</div>
+        </div>
+        <div class="dessert">
+            <div class="cell1" style="height:0px"></div>
+            <div class="cell2" style="height:0px"></div>
+            <div class="cell3" style="height:0px">
+                <div>
+                    <div class="ergs">能量</div>
+                    <div class="nums">0大卡</div>
+                </div>
+                <div>
+                    <div class="ergs">蛋白質</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">糖類</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">脂肪</div>
+                    <div class="nums">0%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="recipe">
+        <div class="header">周四</div>
+        <div class="th1">早餐</div>
+        <div class="th2">
+            <div class="mater">食材</div>
+            <div class="weight">份量</div>
+        </div>
+        <div class="breakfast">
+            <div class="cell1" style="height:0px"></div>
+            <div class="cell2" style="height:0px"></div>
+            <div class="cell3" style="height:0px">
+                <div>
+                    <div class="ergs">能量</div>
+                    <div class="nums">0大卡</div>
+                </div>
+                <div>
+                    <div class="ergs">蛋白質</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">糖類</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">脂肪</div>
+                    <div class="nums">0%</div>
+                </div>
+            </div>
+        </div>
+        <div class="th1">早點</div>
+        <div class="th2">
+            <div class="mater">食材</div>
+            <div class="weight">份量</div>
+        </div>
+        <div class="dessert">
+            <div class="cell1" style="height:0px"></div>
+            <div class="cell2" style="height:0px"></div>
+            <div class="cell3" style="height:0px">
+                <div>
+                    <div class="ergs">能量</div>
+                    <div class="nums">0大卡</div>
+                </div>
+                <div>
+                    <div class="ergs">蛋白質</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">糖類</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">脂肪</div>
+                    <div class="nums">0%</div>
+                </div>
+            </div>
+        </div>
+        <div class="th1">午餐</div>
+        <div class="th2">
+            <div class="mater">食材</div>
+            <div class="weight">份量</div>
+        </div>
+        <div class="lunch">
+            <div class="cell1" style="height:0px"></div>
+            <div class="cell2" style="height:0px"></div>
+            <div class="cell3" style="height:0px">
+                <div>
+                    <div class="ergs">能量</div>
+                    <div class="nums">0大卡</div>
+                </div>
+                <div>
+                    <div class="ergs">蛋白質</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">糖類</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">脂肪</div>
+                    <div class="nums">0%</div>
+                </div>
+            </div>
+        </div>
+        <div class="th1">午點</div>
+        <div class="th2">
+            <div class="mater">食材</div>
+            <div class="weight">份量</div>
+        </div>
+        <div class="dessert">
+            <div class="cell1" style="height:0px"></div>
+            <div class="cell2" style="height:0px"></div>
+            <div class="cell3" style="height:0px">
+                <div>
+                    <div class="ergs">能量</div>
+                    <div class="nums">0大卡</div>
+                </div>
+                <div>
+                    <div class="ergs">蛋白質</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">糖類</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">脂肪</div>
+                    <div class="nums">0%</div>
+                </div>
+            </div>
+        </div>
+        <div class="th1">晚餐</div>
+        <div class="th2">
+            <div class="mater">食材</div>
+            <div class="weight">份量</div>
+        </div>
+        <div class="dinner">
+            <div class="cell1" style="height:0px"></div>
+            <div class="cell2" style="height:0px"></div>
+            <div class="cell3" style="height:0px">
+                <div>
+                    <div class="ergs">能量</div>
+                    <div class="nums">0大卡</div>
+                </div>
+                <div>
+                    <div class="ergs">蛋白質</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">糖類</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">脂肪</div>
+                    <div class="nums">0%</div>
+                </div>
+            </div>
+        </div>
+        <div class="th1">晚點</div>
+        <div class="th2">
+            <div class="mater">食材</div>
+            <div class="weight">份量</div>
+        </div>
+        <div class="dessert">
+            <div class="cell1" style="height:0px"></div>
+            <div class="cell2" style="height:0px"></div>
+            <div class="cell3" style="height:0px">
+                <div>
+                    <div class="ergs">能量</div>
+                    <div class="nums">0大卡</div>
+                </div>
+                <div>
+                    <div class="ergs">蛋白質</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">糖類</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">脂肪</div>
+                    <div class="nums">0%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="recipe">
+        <div class="header">周五</div>
+        <div class="th1">早餐</div>
+        <div class="th2">
+            <div class="mater">食材</div>
+            <div class="weight">份量</div>
+        </div>
+        <div class="breakfast">
+            <div class="cell1" style="height:0px"></div>
+            <div class="cell2" style="height:0px"></div>
+            <div class="cell3" style="height:0px">
+                <div>
+                    <div class="ergs">能量</div>
+                    <div class="nums">0大卡</div>
+                </div>
+                <div>
+                    <div class="ergs">蛋白質</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">糖類</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">脂肪</div>
+                    <div class="nums">0%</div>
+                </div>
+            </div>
+        </div>
+        <div class="th1">早點</div>
+        <div class="th2">
+            <div class="mater">食材</div>
+            <div class="weight">份量</div>
+        </div>
+        <div class="dessert">
+            <div class="cell1" style="height:0px"></div>
+            <div class="cell2" style="height:0px"></div>
+            <div class="cell3" style="height:0px">
+                <div>
+                    <div class="ergs">能量</div>
+                    <div class="nums">0大卡</div>
+                </div>
+                <div>
+                    <div class="ergs">蛋白質</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">糖類</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">脂肪</div>
+                    <div class="nums">0%</div>
+                </div>
+            </div>
+        </div>
+        <div class="th1">午餐</div>
+        <div class="th2">
+            <div class="mater">食材</div>
+            <div class="weight">份量</div>
+        </div>
+        <div class="lunch">
+            <div class="cell1" style="height:0px"></div>
+            <div class="cell2" style="height:0px"></div>
+            <div class="cell3" style="height:0px">
+                <div>
+                    <div class="ergs">能量</div>
+                    <div class="nums">0大卡</div>
+                </div>
+                <div>
+                    <div class="ergs">蛋白質</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">糖類</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">脂肪</div>
+                    <div class="nums">0%</div>
+                </div>
+            </div>
+        </div>
+        <div class="th1">午點</div>
+        <div class="th2">
+            <div class="mater">食材</div>
+            <div class="weight">份量</div>
+        </div>
+        <div class="dessert">
+            <div class="cell1" style="height:0px"></div>
+            <div class="cell2" style="height:0px"></div>
+            <div class="cell3" style="height:0px">
+                <div>
+                    <div class="ergs">能量</div>
+                    <div class="nums">0大卡</div>
+                </div>
+                <div>
+                    <div class="ergs">蛋白質</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">糖類</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">脂肪</div>
+                    <div class="nums">0%</div>
+                </div>
+            </div>
+        </div>
+        <div class="th1">晚餐</div>
+        <div class="th2">
+            <div class="mater">食材</div>
+            <div class="weight">份量</div>
+        </div>
+        <div class="dinner">
+            <div class="cell1" style="height:0px"></div>
+            <div class="cell2" style="height:0px"></div>
+            <div class="cell3" style="height:0px">
+                <div>
+                    <div class="ergs">能量</div>
+                    <div class="nums">0大卡</div>
+                </div>
+                <div>
+                    <div class="ergs">蛋白質</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">糖類</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">脂肪</div>
+                    <div class="nums">0%</div>
+                </div>
+            </div>
+        </div>
+        <div class="th1">晚點</div>
+        <div class="th2">
+            <div class="mater">食材</div>
+            <div class="weight">份量</div>
+        </div>
+        <div class="dessert">
+            <div class="cell1" style="height:0px"></div>
+            <div class="cell2" style="height:0px"></div>
+            <div class="cell3" style="height:0px">
+                <div>
+                    <div class="ergs">能量</div>
+                    <div class="nums">0大卡</div>
+                </div>
+                <div>
+                    <div class="ergs">蛋白質</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">糖類</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">脂肪</div>
+                    <div class="nums">0%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="recipe">
+        <div class="header">周六</div>
+        <div class="th1">早餐</div>
+        <div class="th2">
+            <div class="mater">食材</div>
+            <div class="weight">份量</div>
+        </div>
+        <div class="breakfast">
+            <div class="cell1" style="height:0px"></div>
+            <div class="cell2" style="height:0px"></div>
+            <div class="cell3" style="height:0px">
+                <div>
+                    <div class="ergs">能量</div>
+                    <div class="nums">0大卡</div>
+                </div>
+                <div>
+                    <div class="ergs">蛋白質</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">糖類</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">脂肪</div>
+                    <div class="nums">0%</div>
+                </div>
+            </div>
+        </div>
+        <div class="th1">早點</div>
+        <div class="th2">
+            <div class="mater">食材</div>
+            <div class="weight">份量</div>
+        </div>
+        <div class="dessert">
+            <div class="cell1" style="height:0px"></div>
+            <div class="cell2" style="height:0px"></div>
+            <div class="cell3" style="height:0px">
+                <div>
+                    <div class="ergs">能量</div>
+                    <div class="nums">0大卡</div>
+                </div>
+                <div>
+                    <div class="ergs">蛋白質</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">糖類</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">脂肪</div>
+                    <div class="nums">0%</div>
+                </div>
+            </div>
+        </div>
+        <div class="th1">午餐</div>
+        <div class="th2">
+            <div class="mater">食材</div>
+            <div class="weight">份量</div>
+        </div>
+        <div class="lunch">
+            <div class="cell1" style="height:0px"></div>
+            <div class="cell2" style="height:0px"></div>
+            <div class="cell3" style="height:0px">
+                <div>
+                    <div class="ergs">能量</div>
+                    <div class="nums">0大卡</div>
+                </div>
+                <div>
+                    <div class="ergs">蛋白質</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">糖類</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">脂肪</div>
+                    <div class="nums">0%</div>
+                </div>
+            </div>
+        </div>
+        <div class="th1">午點</div>
+        <div class="th2">
+            <div class="mater">食材</div>
+            <div class="weight">份量</div>
+        </div>
+        <div class="dessert">
+            <div class="cell1" style="height:0px"></div>
+            <div class="cell2" style="height:0px"></div>
+            <div class="cell3" style="height:0px">
+                <div>
+                    <div class="ergs">能量</div>
+                    <div class="nums">0大卡</div>
+                </div>
+                <div>
+                    <div class="ergs">蛋白質</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">糖類</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">脂肪</div>
+                    <div class="nums">0%</div>
+                </div>
+            </div>
+        </div>
+        <div class="th1">晚餐</div>
+        <div class="th2">
+            <div class="mater">食材</div>
+            <div class="weight">份量</div>
+        </div>
+        <div class="dinner">
+            <div class="cell1" style="height:0px"></div>
+            <div class="cell2" style="height:0px"></div>
+            <div class="cell3" style="height:0px">
+                <div>
+                    <div class="ergs">能量</div>
+                    <div class="nums">0大卡</div>
+                </div>
+                <div>
+                    <div class="ergs">蛋白質</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">糖類</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">脂肪</div>
+                    <div class="nums">0%</div>
+                </div>
+            </div>
+        </div>
+        <div class="th1">晚點</div>
+        <div class="th2">
+            <div class="mater">食材</div>
+            <div class="weight">份量</div>
+        </div>
+        <div class="dessert">
+            <div class="cell1" style="height:0px"></div>
+            <div class="cell2" style="height:0px"></div>
+            <div class="cell3" style="height:0px">
+                <div>
+                    <div class="ergs">能量</div>
+                    <div class="nums">0大卡</div>
+                </div>
+                <div>
+                    <div class="ergs">蛋白質</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">糖類</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">脂肪</div>
+                    <div class="nums">0%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="recipe">
+        <div class="header">周日</div>
+        <div class="th1">早餐</div>
+        <div class="th2">
+            <div class="mater">食材</div>
+            <div class="weight">份量</div>
+        </div>
+        <div class="breakfast">
+            <div class="cell1" style="height:0px"></div>
+            <div class="cell2" style="height:0px"></div>
+            <div class="cell3" style="height:0px">
+                <div>
+                    <div class="ergs">能量</div>
+                    <div class="nums">0大卡</div>
+                </div>
+                <div>
+                    <div class="ergs">蛋白質</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">糖類</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">脂肪</div>
+                    <div class="nums">0%</div>
+                </div>
+            </div>
+        </div>
+        <div class="th1">早點</div>
+        <div class="th2">
+            <div class="mater">食材</div>
+            <div class="weight">份量</div>
+        </div>
+        <div class="dessert">
+            <div class="cell1" style="height:0px"></div>
+            <div class="cell2" style="height:0px"></div>
+            <div class="cell3" style="height:0px">
+                <div>
+                    <div class="ergs">能量</div>
+                    <div class="nums">0大卡</div>
+                </div>
+                <div>
+                    <div class="ergs">蛋白質</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">糖類</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">脂肪</div>
+                    <div class="nums">0%</div>
+                </div>
+            </div>
+        </div>
+        <div class="th1">午餐</div>
+        <div class="th2">
+            <div class="mater">食材</div>
+            <div class="weight">份量</div>
+        </div>
+        <div class="lunch">
+            <div class="cell1" style="height:0px"></div>
+            <div class="cell2" style="height:0px"></div>
+            <div class="cell3" style="height:0px">
+                <div>
+                    <div class="ergs">能量</div>
+                    <div class="nums">0大卡</div>
+                </div>
+                <div>
+                    <div class="ergs">蛋白質</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">糖類</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">脂肪</div>
+                    <div class="nums">0%</div>
+                </div>
+            </div>
+        </div>
+        <div class="th1">午點</div>
+        <div class="th2">
+            <div class="mater">食材</div>
+            <div class="weight">份量</div>
+        </div>
+        <div class="dessert">
+            <div class="cell1" style="height:0px"></div>
+            <div class="cell2" style="height:0px"></div>
+            <div class="cell3" style="height:0px">
+                <div>
+                    <div class="ergs">能量</div>
+                    <div class="nums">0大卡</div>
+                </div>
+                <div>
+                    <div class="ergs">蛋白質</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">糖類</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">脂肪</div>
+                    <div class="nums">0%</div>
+                </div>
+            </div>
+        </div>
+        <div class="th1">晚餐</div>
+        <div class="th2">
+            <div class="mater">食材</div>
+            <div class="weight">份量</div>
+        </div>
+        <div class="dinner">
+            <div class="cell1" style="height:0px"></div>
+            <div class="cell2" style="height:0px"></div>
+            <div class="cell3" style="height:0px">
+                <div>
+                    <div class="ergs">能量</div>
+                    <div class="nums">0大卡</div>
+                </div>
+                <div>
+                    <div class="ergs">蛋白質</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">糖類</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">脂肪</div>
+                    <div class="nums">0%</div>
+                </div>
+            </div>
+        </div>
+        <div class="th1">晚點</div>
+        <div class="th2">
+            <div class="mater">食材</div>
+            <div class="weight">份量</div>
+        </div>
+        <div class="dessert">
+            <div class="cell1" style="height:0px"></div>
+            <div class="cell2" style="height:0px"></div>
+            <div class="cell3" style="height:0px">
+                <div>
+                    <div class="ergs">能量</div>
+                    <div class="nums">0大卡</div>
+                </div>
+                <div>
+                    <div class="ergs">蛋白質</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">糖類</div>
+                    <div class="nums">0%</div>
+                </div>
+                <div>
+                    <div class="ergs">脂肪</div>
+                    <div class="nums">0%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal">
+    <div class="modal-body">
+
+    </div>
+    <div class="modal-foot">
+        <button id="btn-agree" class="btn btn-large" type="button" onclick="hideModal()">关闭</button>
+    </div>
+</div>
+</body>
+</html>

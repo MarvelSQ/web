@@ -1,0 +1,2193 @@
+[
+  {
+    "date": "10/1",
+    "meals": [
+      [
+        {
+          "name": "牛奶蜂蜜",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "牛奶",
+              "weight": "200ml"
+            },
+            {
+              "name": "蜂蜜",
+              "weight": "30ml"
+            }
+          ]
+        },
+        {
+          "name": "豬肉包",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "豬肉",
+              "weight": "50g"
+            },
+            {
+              "name": "麵粉",
+              "weight": "100g"
+            },
+            {
+              "name": "青菜",
+              "weight": "50g"
+            }
+          ]
+        },
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "name": "豬肉包",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "豬肉",
+              "weight": "50g"
+            },
+            {
+              "name": "麵粉",
+              "weight": "100g"
+            },
+            {
+              "name": "青菜",
+              "weight": "50g"
+            }
+          ]
+        },
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "name": "豬肉包",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "豬肉",
+              "weight": "50g"
+            },
+            {
+              "name": "麵粉",
+              "weight": "100g"
+            },
+            {
+              "name": "青菜",
+              "weight": "50g"
+            }
+          ]
+        },
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        },
+        {
+          "name": "牛奶蜂蜜",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "牛奶",
+              "weight": "200ml"
+            },
+            {
+              "name": "蜂蜜",
+              "weight": "30ml"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "name": "豬肉包",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "豬肉",
+              "weight": "50g"
+            },
+            {
+              "name": "麵粉",
+              "weight": "100g"
+            },
+            {
+              "name": "青菜",
+              "weight": "50g"
+            }
+          ]
+        },
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        },
+        {
+          "name": "牛奶蜂蜜",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "牛奶",
+              "weight": "200ml"
+            },
+            {
+              "name": "蜂蜜",
+              "weight": "30ml"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "name": "牛奶蜂蜜",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "牛奶",
+              "weight": "200ml"
+            },
+            {
+              "name": "蜂蜜",
+              "weight": "30ml"
+            }
+          ]
+        },
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        },
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        },
+        {
+          "name": "牛奶蜂蜜",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "牛奶",
+              "weight": "200ml"
+            },
+            {
+              "name": "蜂蜜",
+              "weight": "30ml"
+            }
+          ]
+        },
+        {
+          "name": "豬肉包",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "豬肉",
+              "weight": "50g"
+            },
+            {
+              "name": "麵粉",
+              "weight": "100g"
+            },
+            {
+              "name": "青菜",
+              "weight": "50g"
+            }
+          ]
+        }
+      ]
+    ],
+    "energys": [
+      {
+        "kacl": 1,
+        "prt": 0,
+        "sugar": 0,
+        "fat": 0
+      },
+      {
+        "kacl": 0,
+        "prt": 0,
+        "sugar": 0,
+        "fat": 0
+      },
+      {
+        "kacl": 0,
+        "prt": 0,
+        "sugar": 0,
+        "fat": 0
+      },
+      {
+        "kacl": 0,
+        "prt": 0,
+        "sugar": 0,
+        "fat": 0
+      },
+      {
+        "kacl": 0,
+        "prt": 0,
+        "sugar": 0,
+        "fat": 0
+      },
+      {
+        "kacl": 0,
+        "prt": 0,
+        "sugar": 0,
+        "fat": 0
+      }
+    ]
+  },
+  {
+    "date": "10/2",
+    "meals": [
+      [
+        {
+          "name": "牛奶蜂蜜",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "牛奶",
+              "weight": "200ml"
+            },
+            {
+              "name": "蜂蜜",
+              "weight": "30ml"
+            }
+          ]
+        },
+        {
+          "name": "豬肉包",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "豬肉",
+              "weight": "50g"
+            },
+            {
+              "name": "麵粉",
+              "weight": "100g"
+            },
+            {
+              "name": "青菜",
+              "weight": "50g"
+            }
+          ]
+        },
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "name": "豬肉包",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "豬肉",
+              "weight": "50g"
+            },
+            {
+              "name": "麵粉",
+              "weight": "100g"
+            },
+            {
+              "name": "青菜",
+              "weight": "50g"
+            }
+          ]
+        },
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "name": "豬肉包",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "豬肉",
+              "weight": "50g"
+            },
+            {
+              "name": "麵粉",
+              "weight": "100g"
+            },
+            {
+              "name": "青菜",
+              "weight": "50g"
+            }
+          ]
+        },
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        },
+        {
+          "name": "牛奶蜂蜜",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "牛奶",
+              "weight": "200ml"
+            },
+            {
+              "name": "蜂蜜",
+              "weight": "30ml"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "name": "豬肉包",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "豬肉",
+              "weight": "50g"
+            },
+            {
+              "name": "麵粉",
+              "weight": "100g"
+            },
+            {
+              "name": "青菜",
+              "weight": "50g"
+            }
+          ]
+        },
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        },
+        {
+          "name": "牛奶蜂蜜",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "牛奶",
+              "weight": "200ml"
+            },
+            {
+              "name": "蜂蜜",
+              "weight": "30ml"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "name": "牛奶蜂蜜",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "牛奶",
+              "weight": "200ml"
+            },
+            {
+              "name": "蜂蜜",
+              "weight": "30ml"
+            }
+          ]
+        },
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        },
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        },
+        {
+          "name": "牛奶蜂蜜",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "牛奶",
+              "weight": "200ml"
+            },
+            {
+              "name": "蜂蜜",
+              "weight": "30ml"
+            }
+          ]
+        },
+        {
+          "name": "豬肉包",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "豬肉",
+              "weight": "50g"
+            },
+            {
+              "name": "麵粉",
+              "weight": "100g"
+            },
+            {
+              "name": "青菜",
+              "weight": "50g"
+            }
+          ]
+        }
+      ]
+    ],
+    "energys": [
+      {
+        "kacl": 1,
+        "prt": 0,
+        "sugar": 0,
+        "fat": 0
+      },
+      {
+        "kacl": 0,
+        "prt": 0,
+        "sugar": 0,
+        "fat": 0
+      },
+      {
+        "kacl": 0,
+        "prt": 0,
+        "sugar": 0,
+        "fat": 0
+      },
+      {
+        "kacl": 0,
+        "prt": 0,
+        "sugar": 0,
+        "fat": 0
+      },
+      {
+        "kacl": 0,
+        "prt": 0,
+        "sugar": 0,
+        "fat": 0
+      },
+      {
+        "kacl": 0,
+        "prt": 0,
+        "sugar": 0,
+        "fat": 0
+      }
+    ]
+  },
+  {
+    "date": "10/3",
+    "meals": [
+      [
+        {
+          "name": "牛奶蜂蜜",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "牛奶",
+              "weight": "200ml"
+            },
+            {
+              "name": "蜂蜜",
+              "weight": "30ml"
+            }
+          ]
+        },
+        {
+          "name": "豬肉包",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "豬肉",
+              "weight": "50g"
+            },
+            {
+              "name": "麵粉",
+              "weight": "100g"
+            },
+            {
+              "name": "青菜",
+              "weight": "50g"
+            }
+          ]
+        },
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "name": "豬肉包",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "豬肉",
+              "weight": "50g"
+            },
+            {
+              "name": "麵粉",
+              "weight": "100g"
+            },
+            {
+              "name": "青菜",
+              "weight": "50g"
+            }
+          ]
+        },
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "name": "豬肉包",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "豬肉",
+              "weight": "50g"
+            },
+            {
+              "name": "麵粉",
+              "weight": "100g"
+            },
+            {
+              "name": "青菜",
+              "weight": "50g"
+            }
+          ]
+        },
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        },
+        {
+          "name": "牛奶蜂蜜",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "牛奶",
+              "weight": "200ml"
+            },
+            {
+              "name": "蜂蜜",
+              "weight": "30ml"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "name": "豬肉包",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "豬肉",
+              "weight": "50g"
+            },
+            {
+              "name": "麵粉",
+              "weight": "100g"
+            },
+            {
+              "name": "青菜",
+              "weight": "50g"
+            }
+          ]
+        },
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        },
+        {
+          "name": "牛奶蜂蜜",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "牛奶",
+              "weight": "200ml"
+            },
+            {
+              "name": "蜂蜜",
+              "weight": "30ml"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "name": "牛奶蜂蜜",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "牛奶",
+              "weight": "200ml"
+            },
+            {
+              "name": "蜂蜜",
+              "weight": "30ml"
+            }
+          ]
+        },
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        },
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        },
+        {
+          "name": "牛奶蜂蜜",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "牛奶",
+              "weight": "200ml"
+            },
+            {
+              "name": "蜂蜜",
+              "weight": "30ml"
+            }
+          ]
+        },
+        {
+          "name": "豬肉包",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "豬肉",
+              "weight": "50g"
+            },
+            {
+              "name": "麵粉",
+              "weight": "100g"
+            },
+            {
+              "name": "青菜",
+              "weight": "50g"
+            }
+          ]
+        }
+      ]
+    ],
+    "energys": [
+      {
+        "kacl": 1,
+        "prt": 0,
+        "sugar": 0,
+        "fat": 0
+      },
+      {
+        "kacl": 0,
+        "prt": 0,
+        "sugar": 0,
+        "fat": 0
+      },
+      {
+        "kacl": 0,
+        "prt": 0,
+        "sugar": 0,
+        "fat": 0
+      },
+      {
+        "kacl": 0,
+        "prt": 0,
+        "sugar": 0,
+        "fat": 0
+      },
+      {
+        "kacl": 0,
+        "prt": 0,
+        "sugar": 0,
+        "fat": 0
+      },
+      {
+        "kacl": 0,
+        "prt": 0,
+        "sugar": 0,
+        "fat": 0
+      }
+    ]
+  },
+  {
+    "date": "10/4",
+    "meals": [
+      [
+        {
+          "name": "牛奶蜂蜜",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "牛奶",
+              "weight": "200ml"
+            },
+            {
+              "name": "蜂蜜",
+              "weight": "30ml"
+            }
+          ]
+        },
+        {
+          "name": "豬肉包",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "豬肉",
+              "weight": "50g"
+            },
+            {
+              "name": "麵粉",
+              "weight": "100g"
+            },
+            {
+              "name": "青菜",
+              "weight": "50g"
+            }
+          ]
+        },
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "name": "豬肉包",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "豬肉",
+              "weight": "50g"
+            },
+            {
+              "name": "麵粉",
+              "weight": "100g"
+            },
+            {
+              "name": "青菜",
+              "weight": "50g"
+            }
+          ]
+        },
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "name": "豬肉包",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "豬肉",
+              "weight": "50g"
+            },
+            {
+              "name": "麵粉",
+              "weight": "100g"
+            },
+            {
+              "name": "青菜",
+              "weight": "50g"
+            }
+          ]
+        },
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        },
+        {
+          "name": "牛奶蜂蜜",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "牛奶",
+              "weight": "200ml"
+            },
+            {
+              "name": "蜂蜜",
+              "weight": "30ml"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "name": "豬肉包",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "豬肉",
+              "weight": "50g"
+            },
+            {
+              "name": "麵粉",
+              "weight": "100g"
+            },
+            {
+              "name": "青菜",
+              "weight": "50g"
+            }
+          ]
+        },
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        },
+        {
+          "name": "牛奶蜂蜜",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "牛奶",
+              "weight": "200ml"
+            },
+            {
+              "name": "蜂蜜",
+              "weight": "30ml"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "name": "牛奶蜂蜜",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "牛奶",
+              "weight": "200ml"
+            },
+            {
+              "name": "蜂蜜",
+              "weight": "30ml"
+            }
+          ]
+        },
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        },
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        },
+        {
+          "name": "牛奶蜂蜜",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "牛奶",
+              "weight": "200ml"
+            },
+            {
+              "name": "蜂蜜",
+              "weight": "30ml"
+            }
+          ]
+        },
+        {
+          "name": "豬肉包",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "豬肉",
+              "weight": "50g"
+            },
+            {
+              "name": "麵粉",
+              "weight": "100g"
+            },
+            {
+              "name": "青菜",
+              "weight": "50g"
+            }
+          ]
+        }
+      ]
+    ],
+    "energys": [
+      {
+        "kacl": 1,
+        "prt": 0,
+        "sugar": 0,
+        "fat": 0
+      },
+      {
+        "kacl": 0,
+        "prt": 0,
+        "sugar": 0,
+        "fat": 0
+      },
+      {
+        "kacl": 0,
+        "prt": 0,
+        "sugar": 0,
+        "fat": 0
+      },
+      {
+        "kacl": 0,
+        "prt": 0,
+        "sugar": 0,
+        "fat": 0
+      },
+      {
+        "kacl": 0,
+        "prt": 0,
+        "sugar": 0,
+        "fat": 0
+      },
+      {
+        "kacl": 0,
+        "prt": 0,
+        "sugar": 0,
+        "fat": 0
+      }
+    ]
+  },
+  {
+    "date": "10/5",
+    "meals": [
+      [
+        {
+          "name": "牛奶蜂蜜",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "牛奶",
+              "weight": "200ml"
+            },
+            {
+              "name": "蜂蜜",
+              "weight": "30ml"
+            }
+          ]
+        },
+        {
+          "name": "豬肉包",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "豬肉",
+              "weight": "50g"
+            },
+            {
+              "name": "麵粉",
+              "weight": "100g"
+            },
+            {
+              "name": "青菜",
+              "weight": "50g"
+            }
+          ]
+        },
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "name": "豬肉包",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "豬肉",
+              "weight": "50g"
+            },
+            {
+              "name": "麵粉",
+              "weight": "100g"
+            },
+            {
+              "name": "青菜",
+              "weight": "50g"
+            }
+          ]
+        },
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "name": "豬肉包",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "豬肉",
+              "weight": "50g"
+            },
+            {
+              "name": "麵粉",
+              "weight": "100g"
+            },
+            {
+              "name": "青菜",
+              "weight": "50g"
+            }
+          ]
+        },
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        },
+        {
+          "name": "牛奶蜂蜜",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "牛奶",
+              "weight": "200ml"
+            },
+            {
+              "name": "蜂蜜",
+              "weight": "30ml"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "name": "豬肉包",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "豬肉",
+              "weight": "50g"
+            },
+            {
+              "name": "麵粉",
+              "weight": "100g"
+            },
+            {
+              "name": "青菜",
+              "weight": "50g"
+            }
+          ]
+        },
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        },
+        {
+          "name": "牛奶蜂蜜",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "牛奶",
+              "weight": "200ml"
+            },
+            {
+              "name": "蜂蜜",
+              "weight": "30ml"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "name": "牛奶蜂蜜",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "牛奶",
+              "weight": "200ml"
+            },
+            {
+              "name": "蜂蜜",
+              "weight": "30ml"
+            }
+          ]
+        },
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        },
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        },
+        {
+          "name": "牛奶蜂蜜",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "牛奶",
+              "weight": "200ml"
+            },
+            {
+              "name": "蜂蜜",
+              "weight": "30ml"
+            }
+          ]
+        },
+        {
+          "name": "豬肉包",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "豬肉",
+              "weight": "50g"
+            },
+            {
+              "name": "麵粉",
+              "weight": "100g"
+            },
+            {
+              "name": "青菜",
+              "weight": "50g"
+            }
+          ]
+        }
+      ]
+    ],
+    "energys": [
+      {
+        "kacl": 1,
+        "prt": 0,
+        "sugar": 0,
+        "fat": 0
+      },
+      {
+        "kacl": 0,
+        "prt": 0,
+        "sugar": 0,
+        "fat": 0
+      },
+      {
+        "kacl": 0,
+        "prt": 0,
+        "sugar": 0,
+        "fat": 0
+      },
+      {
+        "kacl": 0,
+        "prt": 0,
+        "sugar": 0,
+        "fat": 0
+      },
+      {
+        "kacl": 0,
+        "prt": 0,
+        "sugar": 0,
+        "fat": 0
+      },
+      {
+        "kacl": 0,
+        "prt": 0,
+        "sugar": 0,
+        "fat": 0
+      }
+    ]
+  },
+  {
+    "date": "10/6",
+    "meals": [
+      [
+        {
+          "name": "牛奶蜂蜜",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "牛奶",
+              "weight": "200ml"
+            },
+            {
+              "name": "蜂蜜",
+              "weight": "30ml"
+            }
+          ]
+        },
+        {
+          "name": "豬肉包",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "豬肉",
+              "weight": "50g"
+            },
+            {
+              "name": "麵粉",
+              "weight": "100g"
+            },
+            {
+              "name": "青菜",
+              "weight": "50g"
+            }
+          ]
+        },
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "name": "豬肉包",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "豬肉",
+              "weight": "50g"
+            },
+            {
+              "name": "麵粉",
+              "weight": "100g"
+            },
+            {
+              "name": "青菜",
+              "weight": "50g"
+            }
+          ]
+        },
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "name": "豬肉包",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "豬肉",
+              "weight": "50g"
+            },
+            {
+              "name": "麵粉",
+              "weight": "100g"
+            },
+            {
+              "name": "青菜",
+              "weight": "50g"
+            }
+          ]
+        },
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        },
+        {
+          "name": "牛奶蜂蜜",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "牛奶",
+              "weight": "200ml"
+            },
+            {
+              "name": "蜂蜜",
+              "weight": "30ml"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "name": "豬肉包",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "豬肉",
+              "weight": "50g"
+            },
+            {
+              "name": "麵粉",
+              "weight": "100g"
+            },
+            {
+              "name": "青菜",
+              "weight": "50g"
+            }
+          ]
+        },
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        },
+        {
+          "name": "牛奶蜂蜜",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "牛奶",
+              "weight": "200ml"
+            },
+            {
+              "name": "蜂蜜",
+              "weight": "30ml"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "name": "牛奶蜂蜜",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "牛奶",
+              "weight": "200ml"
+            },
+            {
+              "name": "蜂蜜",
+              "weight": "30ml"
+            }
+          ]
+        },
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        },
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        },
+        {
+          "name": "牛奶蜂蜜",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "牛奶",
+              "weight": "200ml"
+            },
+            {
+              "name": "蜂蜜",
+              "weight": "30ml"
+            }
+          ]
+        },
+        {
+          "name": "豬肉包",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "豬肉",
+              "weight": "50g"
+            },
+            {
+              "name": "麵粉",
+              "weight": "100g"
+            },
+            {
+              "name": "青菜",
+              "weight": "50g"
+            }
+          ]
+        }
+      ]
+    ],
+    "energys": [
+      {
+        "kacl": 1,
+        "prt": 0,
+        "sugar": 0,
+        "fat": 0
+      },
+      {
+        "kacl": 0,
+        "prt": 0,
+        "sugar": 0,
+        "fat": 0
+      },
+      {
+        "kacl": 0,
+        "prt": 0,
+        "sugar": 0,
+        "fat": 0
+      },
+      {
+        "kacl": 0,
+        "prt": 0,
+        "sugar": 0,
+        "fat": 0
+      },
+      {
+        "kacl": 0,
+        "prt": 0,
+        "sugar": 0,
+        "fat": 0
+      },
+      {
+        "kacl": 0,
+        "prt": 0,
+        "sugar": 0,
+        "fat": 0
+      }
+    ]
+  },
+  {
+    "date": "10/7",
+    "meals": [
+      [
+        {
+          "name": "牛奶蜂蜜",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "牛奶",
+              "weight": "200ml"
+            },
+            {
+              "name": "蜂蜜",
+              "weight": "30ml"
+            }
+          ]
+        },
+        {
+          "name": "豬肉包",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "豬肉",
+              "weight": "50g"
+            },
+            {
+              "name": "麵粉",
+              "weight": "100g"
+            },
+            {
+              "name": "青菜",
+              "weight": "50g"
+            }
+          ]
+        },
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "name": "豬肉包",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "豬肉",
+              "weight": "50g"
+            },
+            {
+              "name": "麵粉",
+              "weight": "100g"
+            },
+            {
+              "name": "青菜",
+              "weight": "50g"
+            }
+          ]
+        },
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "name": "豬肉包",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "豬肉",
+              "weight": "50g"
+            },
+            {
+              "name": "麵粉",
+              "weight": "100g"
+            },
+            {
+              "name": "青菜",
+              "weight": "50g"
+            }
+          ]
+        },
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        },
+        {
+          "name": "牛奶蜂蜜",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "牛奶",
+              "weight": "200ml"
+            },
+            {
+              "name": "蜂蜜",
+              "weight": "30ml"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "name": "豬肉包",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "豬肉",
+              "weight": "50g"
+            },
+            {
+              "name": "麵粉",
+              "weight": "100g"
+            },
+            {
+              "name": "青菜",
+              "weight": "50g"
+            }
+          ]
+        },
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        },
+        {
+          "name": "牛奶蜂蜜",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "牛奶",
+              "weight": "200ml"
+            },
+            {
+              "name": "蜂蜜",
+              "weight": "30ml"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "name": "牛奶蜂蜜",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "牛奶",
+              "weight": "200ml"
+            },
+            {
+              "name": "蜂蜜",
+              "weight": "30ml"
+            }
+          ]
+        },
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        },
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "name": "水果早點",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "蘋果",
+              "weight": "1個"
+            },
+            {
+              "name": "香蕉",
+              "weight": "1根"
+            }
+          ]
+        },
+        {
+          "name": "牛奶蜂蜜",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "牛奶",
+              "weight": "200ml"
+            },
+            {
+              "name": "蜂蜜",
+              "weight": "30ml"
+            }
+          ]
+        },
+        {
+          "name": "豬肉包",
+          "kind": 0,
+          "maters": [
+            {
+              "name": "豬肉",
+              "weight": "50g"
+            },
+            {
+              "name": "麵粉",
+              "weight": "100g"
+            },
+            {
+              "name": "青菜",
+              "weight": "50g"
+            }
+          ]
+        }
+      ]
+    ],
+    "energys": [
+      {
+        "kacl": 1,
+        "prt": 0,
+        "sugar": 0,
+        "fat": 0
+      },
+      {
+        "kacl": 0,
+        "prt": 0,
+        "sugar": 0,
+        "fat": 0
+      },
+      {
+        "kacl": 0,
+        "prt": 0,
+        "sugar": 0,
+        "fat": 0
+      },
+      {
+        "kacl": 0,
+        "prt": 0,
+        "sugar": 0,
+        "fat": 0
+      },
+      {
+        "kacl": 0,
+        "prt": 0,
+        "sugar": 0,
+        "fat": 0
+      },
+      {
+        "kacl": 0,
+        "prt": 0,
+        "sugar": 0,
+        "fat": 0
+      }
+    ]
+  }
+]

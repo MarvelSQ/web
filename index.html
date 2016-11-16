@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>主页-营养师</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    <!--<link rel="stylesheet" href="css/bootstrap-theme.min.css">-->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        div {
+            line-height: 34px;
+        }
+
+        .label {
+            font-size: 16px;
+        }
+
+        #u-cur-treatment button, #u-medicine button {
+            text-align: left;
+            white-space: normal;
+        }
+
+        #u-pics img {
+            width: 100%;
+        }
+
+        #u-pics .col-xs-4 {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="border-radius: 0;">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img height="20px" alt="Brand" src="img/logo.svg">
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">待渲染</a></li>
+                <li><a href="login.html">退出</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<div class="container" style="height: 100%;">
+    <div class="row" style="height: 100%;">
+        <div class="col-xs-3" style="padding-top: 65px;">
+            <div class="panel panel-info">
+                <div class="panel-heading">用户分类</div>
+                <div class="panel-body">
+                    <ul id="user-list" class="nav nav-pills nav-stacked" role="tablist">
+                        <li role="presentation" class="active">
+                            <a href="#">全部</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#">医生</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#">亲手</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#">马**</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#">教父</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="user-op" class="col-xs-9" style="height: 100%;padding-top: 65px;overflow: scroll">
+            <div class="panel panel-info">
+                <div class="panel-body">
+                    <button onclick="newNutrition()" class="btn" style="margin-bottom: 10px">
+                        <i class="icon-plus"></i>
+                        添加营养师
+                    </button>
+                    <table id="table" class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th style="min-width: 30px">序号</th>
+                            <th>头像</th>
+                            <th style="min-width: 60px">姓名</th>
+                            <th style="min-width: 40px">星级</th>
+                            <th>执业经历</th>
+                            <th style="min-width: 40px">性别</th>
+                            <th style="min-width: 120px">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="food-add" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title">添加食品</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-2">
+                        餐別：
+                    </div>
+                    <div class="col-xs-10">
+                        <select id="eat-kind-course" class="form-control">
+                            <option value="0">早餐</option>
+                            <option value="1">早點</option>
+                            <option value="2">午餐</option>
+                            <option value="3">午點</option>
+                            <option value="4">晚餐</option>
+                            <option value="5">晚點</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-2">食品名：</div>
+                    <div class="col-xs-10">
+                        <input id="course-name-input" type="text" class="form-control" placeholder="食品名稱">
+                    </div>
+                </div>
+                <div class="row mater">
+                    <div class="col-xs-4">
+                        食材名
+                    </div>
+                    <div class="col-xs-5">
+                        份量
+                    </div>
+                    <div class="col-xs-3">
+                        <span class="glyphicon glyphicon-plus"
+                              onclick="addMater()">
+                        </span>
+                    </div>
+                </div>
+                <div class="materGroup">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <input type="text" class="form-control mater-name" placeholder="食材名稱">
+                        </div>
+                        <div class="col-xs-5">
+                            <input type="text" class="form-control mater-weight" placeholder="份量">
+                            <!--<div class="input-group">-->
+                            <!--<input type="number" class="form-control" placeholder="食品名稱">-->
+                            <!--<span class="input-group-btn">-->
+                            <!--<select class="form-control" style="min-width: 100px">-->
+                            <!--<option value="0">早餐</option>-->
+                            <!--<option value="1">早點</option>-->
+                            <!--<option value="2">午餐</option>-->
+                            <!--<option value="3">午點</option>-->
+                            <!--<option value="4">晚餐</option>-->
+                            <!--<option value="5">晚點</option>-->
+                            <!--</select>-->
+                            <!--</span>-->
+                            <!--</div>-->
+                        </div>
+                        <div class="col-xs-3">
+                        <span class="glyphicon glyphicon-remove"
+                              onclick="removeMater(this)">
+                        </span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <input type="text" class="form-control mater-name" placeholder="食材名稱">
+                        </div>
+                        <div class="col-xs-5">
+                            <input type="text" class="form-control mater-weight" placeholder="份量">
+                            <!--<div class="input-group">-->
+                            <!--<input type="number" class="form-control" placeholder="食品名稱">-->
+                            <!--<span class="input-group-btn">-->
+                            <!--<select class="form-control" style="min-width: 100px">-->
+                            <!--<option value="0">早餐</option>-->
+                            <!--<option value="1">早點</option>-->
+                            <!--<option value="2">午餐</option>-->
+                            <!--<option value="3">午點</option>-->
+                            <!--<option value="4">晚餐</option>-->
+                            <!--<option value="5">晚點</option>-->
+                            <!--</select>-->
+                            <!--</span>-->
+                            <!--</div>-->
+                        </div>
+                        <div class="col-xs-3">
+                        <span class="glyphicon glyphicon-remove"
+                              onclick="removeMater(this)">
+                        </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">關閉</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">刪除</button>
+                <button type="button" class="btn btn-primary" onclick="courseSave()">保存</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div id="erg-edit" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title">修改營養值</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-2">
+                        餐別：
+                    </div>
+                    <div class="col-xs-10">
+                        <select id="eat-kind-erg" class="form-control">
+                            <option value="0">早餐</option>
+                            <option value="1">早點</option>
+                            <option value="2">午餐</option>
+                            <option value="3">午點</option>
+                            <option value="4">晚餐</option>
+                            <option value="5">晚點</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-2">熱量：</div>
+                    <div class="col-xs-10">
+                        <div class="input-group">
+                            <input id="kacl-input" type="number" class="form-control" placeholder="熱量">
+                            <span class="input-group-addon">kacl</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-2">蛋白質：</div>
+                    <div class="col-xs-10">
+                        <div class="input-group">
+                            <input id="prt-input" type="number" class="form-control" placeholder="含量">
+                            <span class="input-group-addon">%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-2">糖類：</div>
+                    <div class="col-xs-10">
+                        <div class="input-group">
+                            <input id="sugar-input" type="number" class="form-control" placeholder="含量">
+                            <span class="input-group-addon">%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-2">脂肪：</div>
+                    <div class="col-xs-10">
+                        <div class="input-group">
+                            <input id="fat-input" type="number" class="form-control" placeholder="含量">
+                            <span class="input-group-addon">%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">關閉</button>
+                <button type="button" class="btn btn-primary" onclick="ergSave()">保存</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--Jquery文件-->
+<script src="js/Jquery-3.1.0.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="js/bootstrap.min.js"></script>
+<!--自定义js-->
+<script type="application/javascript">
+    //api url
+    var BASE_URL = "http://healthit.cn/"
+    var GET_USER_URL = BASE_URL + "nutreat/Home/consultant/appointment_list"
+    var UPLOAD_URL = BASE_URL + "nutreat/Home/Business/recipe_upload"
+    var GET_USER_INFO = BASE_URL + "nutreat/Home/user/public_info"
+
+    var cur_consultant_id;
+    var cur_appoint_id;
+    var user_list = []
+    var rcps_list = []
+
+    $(function () {
+        $('#user-op').hide()
+        cur_consultant_id = getUrlParam("cur")
+        getAppoints()
+    })
+    function getAppoints() {
+        $('#user-op').hide()
+        $('#user-list').html('<li role="presentation"> <a href="javascript:void(0);">加载中。。。</a> </li>')
+        var data = {
+            "consultant_id": cur_consultant_id,
+        }
+        $.get(GET_USER_URL, data, function (res) {
+            if (Number(res.code) === 200) {
+                //alert("獲取")
+                loadUser(res.data.appointments)
+            } else if (Number(res.code) === 400) {
+                $('#user-list').empty()
+                $('#user-list').html('<li role="presentation"> <a href="javascript:void(0);" onclick="getAppoints()">无待制作食谱订单，点击重试</a> </li>')
+            } else {
+                alert("獲取失败!" + res.code + ":" + res.message)
+            }
+        })
+    }
+
+    function loadUser(list) {
+        var userHtml = ""
+        user_list = []
+        rcps_list = []
+        if (list.length != 0) {
+            for (var o = 0; o < list.length; o++) {
+                if (list[o].status >= 1) {
+                    user_list.push(list[o])
+                    userHtml = userHtml + '<li role="presentation"> <a href="javascript:void(0);" onclick="activeUser(' + (user_list.length - 1) + ')">' + list[o].user.nickname + '</a> </li>'
+                }
+            }
+            if (user_list.length != 0) {
+                $('#user-list').empty()
+                $('#user-list').html(userHtml)
+                activeUser(0)
+            } else {
+                $('#user-list').empty()
+                $('#user-list').html('<li role="presentation"> <a href="javascript:void(0);" onclick="getAppoints()">无待制作食谱订单，点击重试</a> </li>')
+            }
+        } else {
+            $('#user-list').empty()
+            $('#user-list').html('<li role="presentation"> <a href="javascript:void(0);" onclick="getAppoints()">无待制作食谱订单，点击重试</a> </li>')
+        }
+
+    }
+
+    function activeUser(index) {
+        cur_appoint_id = user_list[index].id
+        $('#user-list .active').removeClass('active')
+        $('#user-list li:eq(' + index + ')').addClass('active')
+        cur_user = user_list[index]
+        if (rcps_list[index] == undefined) {
+            rcps_list[index] = []
+        }
+        cur_rcps = rcps_list[index]
+        changeCurDay(0)
+        openEdit()
+        $('#user-op').show()
+    }
+
+    //获取url中的参数
+    function getUrlParam(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+        if (r != null) return unescape(r[2]);
+        return null; //返回参数值
+    }
+
+
+</script>
+
+<script type="application/javascript">
+    //global var
+    var cur_user = 0
+    var cur_rcps = []
+    var cur_week = 0
+    var cur_day = 0
+    var cur_rcp
+    var cur_energys = []
+    var cur_meals = []
+    var cur_mc;
+    var course_modal;
+    var isPreviewed = 0
+
+    //global id
+    var recipe_week = $('#recipe-week')
+    var MODAL_COURSE = $('#food-add')
+    var COURSE_NAME_INPUT = $('#course-name-input')
+    var EAT_KIND_COURSE = $('#eat-kind-course')
+    var MODAL_ERG = $('#erg-edit')
+    var EAT_KIND_ERG = $('#eat-kind-erg')
+    var ENERGY_FAT = $('#fat-input')
+    var ENERGY_KACL = $('#kacl-input')
+    var ENERGY_PRT = $('#prt-input')
+    var ENERGY_SUGAR = $('#sugar-input')
+
+
+    //obj used
+    function energy(kacl, prt, sugar, fat) {
+        this.kacl = kacl;
+        this.prt = prt;
+        this.sugar = sugar;
+        this.fat = fat;
+    }
+    function mater(name, weight) {
+        this.name = name;
+        this.weight = weight;
+    }
+    function course(name, kind, maters) {
+        this.name = name;
+        this.kind = kind;
+        this.maters = maters;
+    }
+    function recipe(meals, energys) {
+        this.meals = meals
+        this.energys = energys
+    }
+
+    //product test obj
+    /*
+     var cm1 = [new mater("牛奶", "200ml"), new mater("蜂蜜", "30ml")]
+     var cm2 = [new mater("豬肉", "50g"), new mater("麵粉", "100g"), new mater("青菜", "50g")]
+     var cm3 = [new mater("蘋果", "1個"), new mater("香蕉", "1根")]
+     var c1 = new course("牛奶蜂蜜", 0, cm1);
+     var c2 = new course("豬肉包", 0, cm2);
+     var c3 = new course("水果早點", 0, cm3);
+     var ams = [[c1, c2, c3], [c2, c3], [c2, c3, c1], [c2, c3, c1], [c1, c3, c3], [c3, c1, c2], [c3, c1, c2]]
+     var energys = [new energy(1, 0, 0, 0), new energy(0, 0, 0, 0), new energy(0, 0, 0, 0), new energy(0, 0, 0, 0), new energy(0, 0, 0, 0), new energy(0, 0, 0, 0), new energy(0, 0, 0, 0)]
+     */
+
+    //prepare run in begin
+    $(function () {
+        //console.log(meals)
+        MODAL_COURSE.on('show.bs.modal', function () {
+            test("modal-course is showed")
+            if (course_modal == 0) {
+                $("#eat-kind-course").removeAttr("disabled")
+            } else if (course_modal == 1) {
+                $("#eat-kind-course").attr("disabled", "")
+            }
+        })
+
+        MODAL_ERG.on('show.bs.modal', function () {
+            test("modal-energy is showed")
+        })
+
+        MODAL_COURSE.on('hide.bs.modal', function () {
+            test("modal-course is closed")
+            EAT_KIND_COURSE.val(0)
+            COURSE_NAME_INPUT.val("")
+            $(".materGroup").html("")
+
+        })
+
+        MODAL_ERG.on('hide.bs.modal', function () {
+            test("modal-energy is closed")
+            EAT_KIND_ERG.val(0)
+            ENERGY_FAT.val("")
+            ENERGY_KACL.val("")
+            ENERGY_PRT.val("")
+            ENERGY_SUGAR.val("")
+        })
+
+        $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+            if (e.currentTarget.id == "preview-tab") {
+                //alert("2")
+                isPreviewed = 1
+                previewRecipes(cur_rcps)
+            } else if (e.currentTarget.id == "info-tab") {
+                getUserInfo()
+            }
+        })
+
+        recipe_week.change(function () {
+            //alert(recipe_week.val())
+            changeCurWeek(recipe_week.val())
+        })
+    })
+    function changeCurWeek(week) {
+        cur_week = week
+        changeCurDay(0)
+    }
+    function changeCurDay(day) {
+        $('.pagination .active').removeClass('active')
+        $('.pagination li:eq(' + (day + 1) + ')').addClass('active')
+        cur_day = day;
+        loadRcps()
+    }
+
+    function loadRcps() {
+        if (cur_rcps[cur_day + cur_week * 7] == undefined) {
+            cur_rcps[cur_day + cur_week * 7] = new recipe([], [])
+        }
+        cur_rcp = cur_rcps[cur_day + cur_week * 7]
+        cur_energys = cur_rcp.energys
+        cur_meals = cur_rcp.meals
+        loadRcp()
+    }
+
+    function loadRcp() {
+        loadEnergyAll()
+        loadMealAll()
+    }
+
+    //load meals to each eat
+    function loadMealAll() {
+        test("loading all meal")
+        for (var i = 0; i < 6; i++) {
+            loadMeal(i)
+        }
+    }
+    //load meal to .eat .table tbody
+    function loadMeal(index) {
+        //console.log("meal:"+index)
+        if (cur_meals[index] == undefined) {
+            cur_meals[index] = []
+        }
+        if (cur_meals[index].length == 0) {
+            cur_meals[index] = []
+        }
+        var cs = cur_meals[index]
+        var eatcell = $(".eat:eq(" + index + ") .table tbody");
+        //console.log(eatcell)
+        eatcell.empty()
+        var str = "<tr> ";
+        for (var i = 0; i < cs.length; i++) {
+            var ms = cs[i].maters
+            str = str + '<td rowspan="'
+                    + ms.length + '" class="course" onclick="cEdit('
+                    + index + "," + i + ')">'
+                    + cs[i].name + '</td>'
+            for (var j = 0; j < ms.length; j++) {
+                str = str + '<td>'
+                        + ms[j].name + '</td> <td>'
+                        + ms[j].weight + '</td> </tr><tr>'
+            }
+        }
+        eatcell.html(str)
+    }
+    //load energy to each meal
+    function loadEnergyAll() {
+        test("loading all energy!")
+        for (var i = 0; i < 6; i++) {
+            loadEnergy(i)
+        }
+    }
+    //load energy content to .meal .erg
+    function loadEnergy(index) {
+        if (cur_energys[index] == undefined) {
+            cur_energys[index] = new energy(0, 0, 0, 0)
+        }
+        $(".meal:eq(" + index + ") .erg").each(function (num, ele) {
+            if (num == 0) {
+                $(ele).html(cur_energys[index].kacl)
+            } else if (num == 1) {
+                $(ele).html(cur_energys[index].prt)
+            } else if (num == 2) {
+                $(ele).html(cur_energys[index].fat)
+            } else if (num == 3) {
+                $(ele).html(cur_energys[index].sugar)
+            }
+        })
+    }
+    //
+    function cEdit(m, c) {
+        test("the " + m + " meal's " + c + " course was edited")
+        cur_mc = [m, c]
+        //console.log(m + ";" + c)
+        courseEdit(m, c)
+    }
+    //add new mater to course modal
+    function addMater() {
+        $(".materGroup").append('<div class="row"> <div class="col-xs-4"> <input type="text" class="form-control mater-name" placeholder="食材名稱"> </div> <div class="col-xs-5"> <input type="text" class="form-control mater-weight" placeholder="份量"> </div> <div class="col-xs-3"> <span class="glyphicon glyphicon-remove"onclick="removeMater(this)"> </span> </div> </div>')
+    }
+    //remove exist mater from course modal
+    function removeMater(obj) {
+        //console.log($(obj).parent().parent())
+        $(obj).parent().parent().remove()
+    }
+    //save course modal content
+    function courseSave() {
+        var new_course;
+        var new_maters = []
+        $(".materGroup .row").each(function (index, ele) {
+            new_maters.push(new mater($(ele).find(".mater-name").val(), $(ele).find(".mater-weight").val()))
+        })
+        new_course = new course(COURSE_NAME_INPUT.val(), parseInt(EAT_KIND_COURSE.val()), new_maters)
+        //console.log(new_maters)
+        //console.log(new_course)
+        if (course_modal == 0) {
+            //add new one
+            cur_meals[parseInt(EAT_KIND_COURSE.val())].push(new_course)
+        } else if (course_modal == 1) {
+            //edit exist
+            cur_meals[cur_mc[0]][cur_mc[1]] = new_course
+        }
+        //console.log(meals)
+        loadMeal(parseInt(EAT_KIND_COURSE.val()))
+        MODAL_COURSE.modal('hide')
+        //console.log(parseInt(EAT_KIND_COURSE.val()))
+    }
+    //save energy modal content
+    function ergSave() {
+        var kind = $("#eat-kind-erg").val()
+        var erg = cur_energys[kind]
+        erg.fat = parseInt(ENERGY_FAT.val())
+        erg.kacl = parseInt(ENERGY_KACL.val())
+        erg.prt = parseInt(ENERGY_PRT.val())
+        erg.sugar = parseInt(ENERGY_SUGAR.val())
+        loadEnergy(kind)
+        MODAL_ERG.modal('hide')
+    }
+    function save() {
+        alert($("#eat-kind-course").val())
+    }
+    $('#user-tab a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+    })
+    //    Array.prototype.indexOfM = function (val) {
+    //        for (var i = 0; i < this.length; i++) {
+    //            if (this[i].m == val) return i;
+    //        }
+    //        return -1;
+    //    };
+    //edit course
+    function courseEdit(mid, cid) {
+        test("course_modal state is edit/change/delete!")
+        course_modal = 1
+        var courses = cur_meals[mid]
+        //console.log(courses[cid])
+        var courseMaters = courses[cid].maters
+        COURSE_NAME_INPUT.val(courses[cid].name)
+        var materCell = ""
+        for (var i = 0; i < courseMaters.length; i++) {
+            materCell = materCell + '<div class="row"> <div class="col-xs-4"> <input type="text" class="form-control mater-name" placeholder="食材名稱" value="'
+                    + courseMaters[i].name + '"> </div> <div class="col-xs-5"> <input type="text" class="form-control mater-weight" placeholder="份量" value="'
+                    + courseMaters[i].weight + '"> </div> <div class="col-xs-3"> <span class="glyphicon glyphicon-remove" onclick="removeMater(this)"> </span> </div> </div>'
+        }
+        $(".materGroup").html(materCell)
+        courseShow(mid)
+    }
+    //add course
+    function courseAdd(index) {
+        course_modal = 0
+        ////console.log()
+        courseShow(index)
+    }
+    //edit energy
+    function ergEdit(index) {
+        ENERGY_FAT.val(cur_energys[index].fat)
+        ENERGY_KACL.val(cur_energys[index].kacl)
+        ENERGY_PRT.val(cur_energys[index].prt)
+        ENERGY_SUGAR.val(cur_energys[index].sugar)
+        energyShow(index)
+    }
+    //show course modal
+    function courseShow(index) {
+        EAT_KIND_COURSE.val(index)
+        MODAL_COURSE.modal('show')
+    }
+    //show energy modal
+    function energyShow(index) {
+        EAT_KIND_ERG.val(index);
+        MODAL_ERG.modal('show')
+    }
+
+    function getUserInfo() {
+        clearUserInfo(1)
+        var data = {
+            "id": cur_user.user.id,
+        }
+        $.get(GET_USER_INFO, data, function (res) {
+            if (Number(res.code) === 200) {
+                //alert("獲取")
+                clearUserInfo(0)
+                loadUserInfo(res.user_info)
+            } else if (Number(res.code) === 400) {
+                $('#user-detail p').html('加载失败')
+            } else {
+                clearUserInfo(2)
+                alert("獲取失败!" + res.code + ":" + res.message)
+            }
+        })
+    }
+    function clearUserInfo(index) {
+        var a = ''
+        if (index == 1) {
+            a = '加载中'
+        } else if (index == 2) {
+            a = '加载失败'
+        }
+        $('#u-name').find('button').html(a)
+        $('#u-sex').find('button').html(a)
+        $('#u-birth').find('button').html(a)
+        $('#u-height').find('button').html(a)
+        $('#u-weight').find('button').html(a)
+        $('#u-disease').find('button').html(a)
+        $('#u-cur-treatment').find('button').html(a)
+        $('#u-medicine').find('button').html(a)
+        $('#u-workingtype').html(a)
+        $('#u-recordtime').find('button').html(a)
+        $('#u-createtime').find('button').html(a)
+        $('#u-pics').html(a)
+        $('#u-cancers').html(a)
+        $('#u-likefood').html(a)
+        $('#u-dislikefood').html(a)
+    }
+
+    function loadUserInfo(detail) {
+        $('#u-name').find('button').html(detail.user.name)
+        $('#u-sex').find('button').html(detail.user.sex)
+        $('#u-birth').find('button').html(detail.user.birth_date)
+        $('#u-height').find('button').html(detail.user.height + " cm")
+        $('#u-weight').find('button').html(detail.user.weight + " kg")
+        $('#u-disease').find('button').html(detail.medical_record.disease)
+        $('#u-cur-treatment').find('button').html(detail.medical_record.current_treatment)
+        $('#u-medicine').find('button').html(detail.medical_record.medicine)
+        $('#u-workingtype').html('<div class="btn-group"> <button type="button" class="btn '
+                + setTypeStatus(detail.medical_record.workingtype.id) + '">'
+                + detail.medical_record.workingtype.name
+                + '</button> <button type="button" class="btn btn-default">'
+                + detail.medical_record.workingtype.description + '</button> </div>')
+        $('#u-recordtime').find('button').html(detail.medical_record.recordtime + "")
+        $('#u-createtime').find('button').html(detail.medical_record.createtime + "")
+        for (var i = 0; i < detail.medical_record.pictures.length; i++) {
+            $('#u-pics').append('<div class="col-xs-4"> <img src="'
+                    + detail.medical_record.pictures[i].path + '" alt="'
+                    + detail.medical_record.pictures[i].create_time + '" class="img-thumbnail"></div>')
+        }
+        if (detail.medical_record.cancers.length != 0) {
+            for (var i = 0; i < detail.medical_record.cancers.length; i++) {
+                $('#u-cancers').append('<div class="btn-group"> <button type="button" class="btn btn-default">'
+                        + detail.medical_record.cancers[i].name + '</button> <button type="button" class="btn '
+                        + setCancerStatus(detail.medical_record.cancers[i].period) + '">'
+                        + detail.medical_record.cancers[i].period + '</button> </div>')
+            }
+        } else {
+            $('#u-cancers').append('<button type="button" class="btn btn-default">无癌症疾病，或未填写</button>')
+        }
+        if (detail.diet.like_food.length != 0) {
+            for (var i = 0; i < detail.diet.like_food.length; i++) {
+                $('#u-likefood').append('<span class="label label-success">' + detail.diet.like_food[i].name + '</span>')
+            }
+        } else {
+            $('#u-likefood').html('<span class="label label-default">未填写喜爱食物</span>')
+        }
+        if (detail.diet.taboo_food.length != 0) {
+            for (var i = 0; i < detail.diet.taboo_food.length; i++) {
+                $('#u-dislikefood').append('<span class="label label-danger">' + detail.diet.taboo_food[i].name + '</span>')
+            }
+        } else {
+            $('#u-dislikefood').html('<span class="label label-default">未填写厌恶食物</span>')
+        }
+    }
+
+    function setTypeStatus(index) {
+        var e = Number(index)
+        switch (e) {
+            case 1:
+                return 'btn-success'
+                break;
+            case 2:
+                return 'btn-primary'
+                break;
+            case 3:
+                return 'btn-warning'
+                break;
+            case 4:
+                return 'btn-danger'
+                break;
+        }
+    }
+
+
+    function setCancerStatus(index) {
+        var e = Number(index)
+        switch (e) {
+            case 1:
+                return 'btn-default'
+                break;
+            case 2:
+                return 'btn-success'
+                break;
+            case 3:
+                return 'btn-info'
+                break;
+            case 4:
+                return 'btn-primary'
+                break;
+            case 5:
+                return 'btn-warning'
+                break;
+            case 6:
+                return 'btn-danger'
+                break;
+        }
+    }
+
+    //test
+    function test(obj) {
+        console.log(obj)
+    }
+</script>
+<script>
+    var preview_html1 = '<html> <head> <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title>食譜-預覽</title> <style>div {line-height: 22px;}.week {width: 2625px;float: left;border: 1px solid #2196f3;border-radius: 4px;padding: 10px;margin-top: 20px;}.recipe{width: 375px;background-color: #2aabd2;}.header {background-color: #00b050;text-align: center;}.th1, .th2 {background-color: #d9d9d9;}.header, .th1, .th2, .cell1, .cell2, .cell3 {box-sizing: border-box;border: 1px solid #ffffff;}.recipe, .breakfast, .lunch, .dinner, .dessert, .th1, .th2, .cell1, .cell2, .cell3, .mater, .weight, .maters, .weights, .ergs, .nums {float: left;}.breakfast, .lunch, .dinner, .dessert {width: 100%;}.breakfast {background-color: #ccecff}.lunch {background-color: #edf1de}.dinner {background-color: #ffffcc}.dessert {background-color: #fde9d9}.th1, .cell1 {width: 25%;}.th2 {width: 75%;}.cell2 {width: 40%;}.cell3 {width: 35%;}.mater {width: 30%;}.weight {}.maters {width: 56.25%;}.weights {width: 43.75%;}.ergs {width: 50%;}.nums {width: 50%;text-align: center;}.cell1, .cell2, .cell3 {min-height: 88px;}.modal {display: none;position: fixed;top: 0;right: 0;left: 0;height: 100%;overflow: scroll;background: rgba(0, 0, 0, 0.7);;}.modal-body {width: 375px;background-color: #2aabd2;margin-top: 74px;margin-right: auto;margin-left: auto;margin-bottom: 0;}.modal-foot{margin: 15px;position: fixed;right: 0;left: 0;top: 0;text-align: center;}.btn {font-size: 16px;color: #FFF;background-color: #4BBE2C;border: 0;border-radius: 4px;padding: 8px;}.btn[disabled] {background-color: #ccc;}</style> </head> <body>'
+    var preview_html2 = ''
+    var preview_html3 = '</body> </html>'
+
+    function previewRecipes(rcps) {
+        preview_html2 = ''
+        for (var k = 0; k < 14; k++) {
+            if (rcps[k] == undefined) {
+                rcps[k] = new recipe([], [])
+            }
+            if(k==0||k==7){
+                preview_html2 = preview_html2 +'<div class="week">'
+            }
+            preview_html2 = preview_html2 + loadPreviewRcp(rcps[k], k)
+            if(k==6||k==13){
+                preview_html2 = preview_html2 +'</div>'
+            }
+        }
+        $("#preview-iframe").attr('srcdoc', preview_html1 + preview_html2 + preview_html3)
+        return preview_html2
+    }
+
+    function loadPreviewRcp(rcp, day) {
+        var rep = '<div class="recipe"> <div class="header">' + date(day) + '</div>'
+        for (var i = 0; i < 6; i++) {
+            rep = rep + '<div class="th1">' + kind(i) + '</div> <div class="th2"> <div class="mater">食材</div> <div class="weight">份量</div> </div> <div class="' + kindClass(i) + '">'
+
+            if (rcp.energys[i] == undefined) {
+                rcp.energys[i] = new energy(0, 0, 0, 0)
+            }
+            if (rcp.meals[i] == undefined) {
+                rcp.meals[i] = []
+            }
+            rep = rep + loadMealforPreview(rcp.meals[i], rcp.energys[i]) + "</div>"
+        }
+
+        return rep + "</div>"
+    }
+
+    function kind(index) {
+        switch (index) {
+            case 0:
+                return '早餐'
+                break;
+            case 1:
+                return '早點'
+                break;
+            case 2:
+                return '午餐'
+                break;
+            case 3:
+                return '午點'
+                break;
+            case 4:
+                return '晚餐'
+                break;
+            case 5:
+                return '晚點'
+                break;
+        }
+    }
+
+    function date(index) {
+        var w
+        if(index<7){
+            w="第一周"
+        }else {
+            w="第二周"
+        }
+        switch (index % 7) {
+            case 0:
+                return w+'（周一）'
+                break;
+            case 1:
+                return w+'（周二）'
+                break;
+            case 2:
+                return w+'（周三）'
+                break;
+            case 3:
+                return w+'（周四）'
+                break;
+            case 4:
+                return w+'（周五）'
+                break;
+            case 5:
+                return w+'（周六）'
+                break;
+            case 6:
+                return w+'（周日）'
+                break;
+        }
+    }
+
+    function kindClass(index) {
+        switch (index) {
+            case 0:
+                return 'breakfast'
+                break;
+            case 2:
+                return 'lunch'
+                break;
+            case 4:
+                return 'dinner'
+                break;
+            case 1:
+            case 3:
+            case 5:
+                return 'dessert'
+                break;
+        }
+    }
+
+    function loadMealforPreview(eat, erg) {
+        test("product the meal's course and energy")
+        var height = 0;
+        var cell1 = '<div class="cell1" ';
+        var cell2 = '<div class="cell2" ';
+        var cell3 = '<div class="cell3" ';
+        var courses = ''
+        var maters = ''
+        for (var i = 0; i < eat.length; i++) {
+            var course = '<div style="height:'
+                    + eat[i].maters.length * 22 + 'px;">'
+                    + eat[i].name + '</div>'
+            for (var j = 0; j < eat[i].maters.length; j++) {
+                height = height + 1;
+                var mater = '<div> <div class="maters">'
+                        + eat[i].maters[j].name + '</div> <div class="weights">'
+                        + eat[i].maters[j].weight + '</div> </div>'
+                maters = maters + mater
+            }
+            courses = courses + course;
+        }
+        var allheight = 'style="height:' + height * 22 + 'px">'
+        var ergs = '<div> <div class="ergs">能量</div> <div class="nums">'
+                + erg.kacl + '大卡</div> </div> <div> <div class="ergs">蛋白質</div> <div class="nums">'
+                + erg.prt + '%</div> </div> <div> <div class="ergs">糖類</div> <div class="nums">'
+                + erg.sugar + '%</div> </div> <div> <div class="ergs">脂肪</div> <div class="nums">'
+                + erg.fat + '%</div> </div>'
+        cell3 = cell3 + allheight + ergs + '</div>'
+        cell1 = cell1 + allheight + courses + '</div>'
+        cell2 = cell2 + allheight + maters + '</div>'
+        return cell1 + cell2 + cell3
+    }
+</script>
+<script>
+    function confirmUploadRcps() {
+        if (isPreviewed == 1) {
+            uploadRcps()
+        } else if (isPreviewed == 0) {
+            var r = confirm("请前往食谱预览确认食谱,点击‘取消’前往预览；点击‘确认’继续上传")
+            if (r == true) {
+                uploadRcps()
+            }
+            else {
+                openPreview()
+            }
+        }
+    }
+    function uploadRcps() {
+        var updata = new FormData()
+        updata.append('consultant_id', cur_consultant_id)
+        updata.append('appointment_id', cur_appoint_id)
+        updata.append('recipe', previewRecipes(cur_rcps))
+        updata.append('recipe_json',JSON.stringify(cur_rcps))
+        test('recipe:'+previewRecipes(cur_rcps))
+        test('recipe_json:'+JSON.stringify(cur_rcps))
+        $.ajax({
+            url: UPLOAD_URL,
+            type: 'POST',
+            data: updata,
+            cache: false,
+            contentType: false,    //不可缺
+            processData: false,    //不可缺
+            success: function (data) {
+                if (Number(data.code) === 200) {
+                    alert("上傳成功")
+                    getAppoints()
+                } else {
+                    alert("上傳失败!" + data.code + ":" + data.message)
+                }
+            }
+        })
+    }
+    function openPreview() {
+        $('#user-tab li:eq(1) a').tab('show')
+    }
+    function openEdit() {
+        $('#user-tab li:eq(0) a').tab('show')
+    }
+</script>
+</body>
+</html>

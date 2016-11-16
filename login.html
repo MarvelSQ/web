@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>内部管理登陸頁-Nutreat</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .container {
+            height: 100%;
+        }
+
+        .col-xs-6.col-xs-offset-3 {
+            margin-top: 7%;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-6 col-xs-offset-3">
+            <div class="panel">
+                <div class="panel-body" style="text-align: center">
+                    <div>
+                        <img style="width: 180px" src="img/logo_big.png">
+                        <h3>Nutreat 内部管理端</h3>
+                    </div>
+                    <div style="text-align: left;width: 250px;margin: 0 auto 15px">
+                        <form role="form" method="post">
+                            <div class="form-group">
+                                <label for="telephone">帳號名：</label>
+                                <input type="text" class="form-control" id="telephone" placeholder="輸入帳戶名">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">密碼：</label>
+                                <input type="password" class="form-control" id="password"
+                                       placeholder="輸入密碼">
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <button onclick="login()" type="button" class="btn btn-primary btn-block">登陸</button>
+                                </div>
+                                <!--<div class="col-xs-6">-->
+                                    <!--<button type="button" class="btn btn-default btn-block">註冊</button>-->
+                                <!--</div>-->
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Jquery文件-->
+<script src="js/Jquery-3.1.0.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="js/bootstrap.min.js"></script>
+<!--自定义js-->
+<script type="application/javascript">
+    var base_url="http://healthit.cn/"
+    var login_url=base_url+"nutreat/Home/ConsultantAuth/local"
+
+
+    function login() {
+        var formData=new FormData()
+        formData.append("telephone",$('#telephone').val())
+        formData.append("password",$('#password').val())
+        $.ajax({
+            url: login_url,
+            type: 'POST',
+            data: formData,
+            cache: false,
+            contentType: false,    //不可缺
+            processData: false,    //不可缺
+            success: function (data) {
+                if (Number(data.code) === 200) {
+                    alert("登錄成功")
+                    var nums=data.token.split(":")
+                    location.href="index.html"
+                } else {
+                    alert("修改失败!" + data.code + ":" + data.message)
+                }
+            }
+        })
+    }
+</script>
+</body>
+</html>
